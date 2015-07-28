@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="style.css">
+
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+		<meta charset=utf-8 />
+		<title>IBGs Årscykelgenerator</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Årscykler, generator</h1>
+				</div>
+			</div>
+			<div id="input">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Inmatning</h2>
+					</div>
+					<div class="col-md-12">
+						<form class="form-horizontal" id="title-form">
+							<div class="form-group form-group-lg">
+							    <input class="form-control" type="text" id="cycle-title" placeholder="Titel på årscykeln">
+							</div>
+						</form>
+					</div>
+
+					<div class="col-md-12">
+						<div role="tabpanel">
+							<ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">Datum</a></li>
+							    <li role="presentation"><a href="#json" aria-controls="json" role="tab" data-toggle="tab">JSON</a></li>
+							</ul>
+
+							<div class="tab-content">
+							    <div role="tabpanel" class="tab-pane active" id="list">
+							    	<div class="level-container last-level" id="level-1">
+										<div class="row">
+											<div class="col-md-12">
+												<h3>Nivå 1</h3>
+											</div>
+										</div>
+										<form class="form-inline input-form">
+											<div class="row form-row last-row" id="form-row-1-1">
+												<div class="col-md-12">
+													<div class="form-group frommonth-wrap">
+														<select class="form-control frommonth validate">
+															<option value="1">Januari</option>
+															<option value="2">Februari</option>
+															<option value="3">Mars</option>
+															<option value="4">April</option>
+															<option value="5">Maj</option>
+															<option value="6">Juni</option>
+															<option value="7">Juli</option>
+															<option value="8">Augusti</option>
+															<option value="9">September</option>
+															<option value="10">Oktober</option>
+															<option value="11">November</option>
+															<option value="12">December</option>
+														</select>
+													</div>
+													<div class="form-group fromday-wrap">
+														<select class="form-control fromday validate">
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+															<option value="6">6</option>
+															<option value="7">7</option>
+															<option value="8">8</option>
+															<option value="9">9</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+															<option value="13">13</option>
+															<option value="14">14</option>
+															<option value="15">15</option>
+															<option value="16">16</option>
+															<option value="17">17</option>
+															<option value="18">18</option>
+															<option value="19">19</option>
+															<option value="20">20</option>
+															<option value="21">2</option>
+															<option value="22">22</option>
+															<option value="23">23</option>
+															<option value="24">24</option>
+															<option value="25">25</option>
+															<option value="26">26</option>
+															<option value="27">27</option>
+															<option value="28">28</option>
+															<option value="29">29</option>
+															<option value="30">30</option>
+															<option value="31">31</option>
+														</select>
+													</div>
+													<div class="form-group">
+														<p>-</p>
+													</div>
+													<div class="form-group tomonth-wrap">
+														<select class="form-control tomonth validate">
+															<option value="1">Januari</option>
+															<option value="2">Februari</option>
+															<option value="3">Mars</option>
+															<option value="4">April</option>
+															<option value="5">Maj</option>
+															<option value="6">Juni</option>
+															<option value="7">Juli</option>
+															<option value="8">Augusti</option>
+															<option value="9">September</option>
+															<option value="10">Oktober</option>
+															<option value="11">November</option>
+															<option value="12">December</option>
+														</select>
+													</div>
+													<div class="form-group today-wrap">
+														<select class="form-control today validate">
+															<option value="1">1</option>
+															<option value="2">2</option>
+															<option value="3">3</option>
+															<option value="4">4</option>
+															<option value="5">5</option>
+															<option value="6">6</option>
+															<option value="7">7</option>
+															<option value="8">8</option>
+															<option value="9">9</option>
+															<option value="10">10</option>
+															<option value="11">11</option>
+															<option value="12">12</option>
+															<option value="13">13</option>
+															<option value="14">14</option>
+															<option value="15">15</option>
+															<option value="16">16</option>
+															<option value="17">17</option>
+															<option value="18">18</option>
+															<option value="19">19</option>
+															<option value="20">20</option>
+															<option value="21">2</option>
+															<option value="22">22</option>
+															<option value="23">23</option>
+															<option value="24">24</option>
+															<option value="25">25</option>
+															<option value="26">26</option>
+															<option value="27">27</option>
+															<option value="28">28</option>
+															<option value="29">29</option>
+															<option value="30">30</option>
+															<option value="31">31</option>
+														</select>
+													</div>
+													<div class="form-group description-wrap">
+														<div class="form-group">
+															<input type="text" class="form-control description validate" placeholder="Beskrivning">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row top-buffer">
+												<div class="col-md-12">
+													<button type="button" class="btn btn-info btn-add-row">Lägg till nytt datum</button>
+												</div>
+											</div>
+										</form>
+										<hr>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<button type="button" class="btn btn-info" id="btn-add-level">Lägg till ny nivå</button>
+											<button type="button" class="btn btn-success" id="btn-generate">Generera årscykel</button>
+											<button type="button" class="btn" id="btn-generate-json">Exportera JSON</button>
+										</div>
+									</div>
+							    </div>
+							    <div role="tabpanel" class="tab-pane" id="json">
+									<form class="form top-buffer" id="json-form">
+										<textarea class="form-control" id="textarea-json" rows="20"></textarea>
+									</form>
+									<button type="button" class="btn btn-success top-buffer" id="btn-generate-from-json">Generera årscykel</button>
+							    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="output">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="chartcontainer" style="height: 500px; width: 100%">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="output-json">
+			</div>
+		</div>
+		</div>
+	</body>
+
+
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+	<script src="script.js"></script>
+</html>
+
+

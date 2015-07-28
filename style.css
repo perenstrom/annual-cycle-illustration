@@ -1,0 +1,10 @@
+.top-buffer { margin-top:15px; }
+
+.description-wrap { width: auto;}
+
+.form-inline .description {
+	margin-right: 5px;
+	width: 300px; !important
+}
+
+#textarea-json {font-family:monospace;}
